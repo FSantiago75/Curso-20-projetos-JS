@@ -1,0 +1,277 @@
+* {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #333;
+
+}
+
+html,
+body {
+  min-height: 100%;
+  
+}
+
+html {
+  background: linear-gradient(135deg, #ea02ff 0%, #0084db 100%);
+  transform: scale(.96);
+}
+
+input:focus {
+  outline: none;
+}
+
+/* containers de fundo, banner, mascara de banner e estrutura inicial */
+
+.register-container {
+  background-color: antiquewhite;
+  width: 90%;
+  max-width: 900px;
+  min-height: 80vh;
+  margin: 0 auto;
+  margin-top: .4rem;
+  display: flex;
+  box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.432);
+  border-bottom-left-radius: 50px;
+  border-top-left-radius: 50px;
+}
+
+.register-banner {
+  background: url(../Assets/bg-form.jpg);
+  object-fit: cover;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 50%;
+  border-bottom-left-radius: 50px;
+  border-top-left-radius: 50px;
+}
+
+.banner-layer {
+  background: linear-gradient(150deg, #190b7ab3 0%, #0099ff56 80%);
+  height: 100%;
+  padding: 1rem;
+  display: flex;
+  border-bottom-left-radius: 50px;
+  border-top-left-radius: 50px;
+}
+
+.register-banner h1 {
+  margin: 1.5rem 0 0 1rem;
+  font-size: 3.8rem;
+  margin-bottom: 1.5rem;
+  color: white;
+  word-spacing: 50rem;
+  text-shadow: 0px 0px 8px rgba(255, 255, 255, 0.6);
+}
+
+/* Dados e input */
+
+.register-form{
+  background-color: #fdfdfd;
+  padding: 2rem;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.register-form h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  margin: 0 0 1rem 0;
+}
+
+.register-form p {
+  text-align: center;
+  color: rgb(75, 75, 75);
+  margin: 0 0 1rem 0;
+  font-size: 0.8rem;
+}
+
+.form-control, .form-control-password {
+  margin: 0 0 1rem 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-control p{
+  margin: 0;
+  color: rgba(255, 0, 0, 0.589);
+}
+
+.form-control label {
+  font-weight: bold;
+  margin: 0 0 0.6rem 0;
+}
+
+.form-control input {
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.39);
+  padding: 0.6rem 0rem;
+  background: #ffffff00;
+  box-shadow: 0px 3px 4px -3px rgba(0, 30, 94, 0.466);
+  font-size: 1.1rem;
+}
+
+.error {
+  box-shadow: 0px 3px 4px -3px rgba(94, 0, 0, 0.589);
+  color: rgba(255, 0, 0, 0.589);
+  border-bottom: 1px solid rgba(134, 10, 10, 0.39);
+
+}
+
+.open-password, .open-custom-password {
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.open-password:hover, .open-custom-password:hover {
+  animation: 2s infinite ease-in-out generate-password-animation;
+}
+
+.generated-password-box{
+  display: none;
+  margin: 0 0 0.6rem 0;
+  border: 1px solid #0097ff;
+  animation: 2s infinite ease-in-out generate-password-animation-box;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding: 0.4rem;
+  color: #333;
+  text-align: center;
+}
+
+.generated-password-box p {
+  margin: 0 0 0.4rem 0;
+}
+
+.generated-password-box h4 {
+  font-size: 1rem;
+  margin: 0 0 0.2rem 0;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.register-form button {
+  margin: 1rem 0 0 0;
+  padding: 0.5rem 0;
+  font-size: 1.1rem;
+  box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.30);
+  border-radius: 5px;
+  border: 1px solid rgba(14, 14, 14, 0.37);
+  color: #f7f7f7;
+  text-shadow: -1px -1px 1px #00000077, 1px -1px 1px #00000077,
+    -1px 1px 1px #00000077, 1px 1px 1px #00000077;
+  font-weight: 650;
+  background: linear-gradient(150deg, #281986d8 0%, #36a9f5d8 80%);
+  background-size: 200% 200%;
+  transition: .6s;
+  animation: password-box-animation 3s infinite ease-in-out;
+  cursor: pointer;
+}
+
+.register-form button:hover{
+  box-shadow: 0 0 3px 4px rgba(0, 0, 0, 0.247);
+
+
+}
+
+@keyframes generate-password-animation {
+  0% {
+    color: #52009e;
+  }
+  50% {
+    color: #0099ff;
+  }
+  100% {
+    color: #52009e;
+  }
+}
+
+@keyframes generate-password-animation-box {
+  0% {
+    border-color: #52009e;
+  }
+  50% {
+    border-color: #0099ff;
+  }
+  100% {
+    border-color: #52009e;
+  }
+}
+
+@keyframes password-box-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  33% {
+    background-position: 20% 50%;
+  }
+  66% {
+    background-position: 50% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Seleção de geração de senha */
+
+.generate-options{
+  display: none;
+  box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.288) inset;
+  margin: 0 0 1rem 0;
+  padding: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.281);
+}
+
+.generate-options p{
+  font-size: 1rem;
+}
+
+.open-custom-password-box{
+  display: none;
+}
+
+
+
+.generate-options .form-control{
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.generate-options label{
+  font-size: .8rem;
+}
+
+.generate-options input{
+  max-width: 30px;
+  font-size: .9rem;
+  text-align: center;
+  border: 1px solid rgba(0, 0, 0, 0.349);
+}
+
+.form-control input[type="checkbox"]{
+  margin: 0 .5rem 0 0;
+  cursor: pointer;;
+}
+
+.generate-options button{
+  display: flex;
+  flex-direction: column;
+  font-size: .9rem;
+  box-shadow: none;
+  padding: .4rem 4rem;
+  margin: 0 auto;
+  animation: password-box-animation 3s infinite ease-in-out;
+}
+.generate-options button:hover{
+  box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.30);
+}
+
+
+

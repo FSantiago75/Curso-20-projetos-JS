@@ -1,0 +1,81 @@
+*{
+    font-family: Arial;
+}
+
+body{
+    padding: .2rem 1rem;
+    background-color: #ffffff;
+}
+
+h1, h2{
+    text-align: center;
+}
+
+.add-task-form{
+    margin: 0 1rem 1.5rem;
+}
+
+.add-task-form input{
+    padding: .5rem 1.4rem;
+    margin-right: .5rem;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+
+
+
+.add-task-form button{
+    padding: .5rem 1.4rem;
+    background-color: #2196f3;
+    color: #ffffff;
+    border: 1px solid #244ccf;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+p{
+    font-size: 1.1rem;
+    margin: 0 0 10px 0;
+    color: rgb(15, 15, 15);
+}
+
+.kanban-tasks{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1.5rem;
+}
+
+.column{
+    background-color: #eeeeee;
+    padding: .5rem;
+    width: 30%;
+    border-radius: 10px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.63);
+}
+
+.tasks{
+    list-style: none;
+    margin: 0;
+    padding: 1rem;
+    border: 3px dashed #c2c2c2;
+    border-radius: 10px;
+    min-height: 40px ;
+}
+
+.tasks li{
+    background-color: #ffffff;
+    padding: .8rem;
+    margin: 0.5rem 0;
+    border-radius: 5px;
+    cursor: move;
+    border: 1px solid #7575759a;
+    transition: .6s;
+}
+
+.tasks li.dragging{
+    opacity: .5;
+}
+
+.tasks li:hover{
+    background-color: #f2f2f2;
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barra de Progresso</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div class="tela_inicial" style= "display: block;">
+        <h1 class="title">Barra de Progresso</h1>
+        <div class="container">
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+            <div class="controls">
+                <button id="previous-btn" class="previous-btn"><i class="bi bi-arrow-left"> Voltar</i></button>
+                <button id="next-btn" class="next-btn">Avançar <i class="bi bi-arrow-right"></i></button>
+            </div>
+        </div>
+    </div>
+    <div class="tela_final" style="display: none;">
+        <h1 class="title">Você finalizou seu processo!!</h1>
+        <button class="btn-voltar-tela"><i class="bi bi-arrow-left"> Voltar</i></button>
+        
+    </div>
+
+</body>
+
+</html>

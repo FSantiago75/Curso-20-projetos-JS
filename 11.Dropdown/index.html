@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Sobre</a></li>
+            <li><a href="#">Produto</a>
+                <ul>
+                    <li><a href="#">Produto 1</a></li>
+                    <li><a href="#">Produto 2</a>
+                        <ul>
+                            <li><a href="#">Subproduto 1</a></li>
+                            <li><a href="#">Subproduto 2</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="#">Contato</a></li>
+    </nav>
+    <div class="content">
+        <div class="HomeTitle">Home</div>
+        <div class="SobreTitle">Sobre</div>
+        <div class="ProdutoTitle">Produto
+            <div class="produto">Produto 1
+            </div>
+            <div class="produto">Produto 2
+                <div class="subproduto">Subproduto 1</div>
+                <div class="subproduto">Subproduto 2</div>
+            </div>
+
+        </div>
+        <div class="ContatoTitle">Contato</div>
+    </div>
+    
+
+    <div class="btn"><button type="button" class="back-to-top" id="Back-to-top">Volte para o topo!</button></div>
+</body>
+</html>

@@ -1,0 +1,84 @@
+* {
+  font-family: Helvetica;
+}
+body {
+  background-color: rgb(240, 240, 240);
+}
+
+.imageSelect {
+  margin-left: 3rem;
+  padding: 0.4rem;
+  border-radius: 10px;
+  position: absolute;
+  font-size: 1rem;
+  margin-top: -2rem;
+}
+
+h1 {
+  text-align: center;
+  margin: 0;
+  position: relative;
+}
+.game {
+  justify-content: center;
+  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  max-width: 570px;
+  margin: 0 auto;
+  background-color: rgb(255, 255, 255);
+  padding: 1rem;
+  border-radius: 36px;
+  border: 4px double black;
+  box-shadow: 0 0 6px rgb(218, 218, 218);
+}
+.card {
+  width: 8rem;
+  position: relative;
+  height: 12rem;
+  border-radius: 20px;
+}
+.congrats-div {
+  text-align: center;
+  padding: 0.5rem;
+}
+.game-attempts {
+  text-align: center;
+  padding: 0.5rem;
+}
+
+/* Estilização de frente e verso das cartas, adição do flip */
+
+.card .front,
+.card .back {
+  object-fit: cover;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  border: 1px solid #000;
+  border-radius: 20px;
+  background-position: center;
+  background-size: cover;
+}
+
+.card .front {
+  transform: rotateY(180deg);
+  transition: 0.4s;
+}
+
+.card .back {
+  transform: rotateY(0deg);
+  transition: 0.4s;
+  z-index: 1;
+}
+
+.card.flip .front {
+  transform: rotateY(0deg);
+  z-index: 2;
+}
+
+.card.flip .back {
+  transform: rotateY(0deg);
+}

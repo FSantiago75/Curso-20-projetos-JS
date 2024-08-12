@@ -1,0 +1,144 @@
+/* Estilos globais */
+*{
+    font-family: helvetica;
+    margin: 0;
+    padding: 0;
+}
+
+/* Corpo da página */
+body{
+    padding-bottom: 800px;
+}
+
+/* Barra de navegação */
+nav{
+    background-color: #333;
+}
+
+/* Lista de itens da barra de navegação */
+nav ul{
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    padding: 1rem 1rem;
+}
+
+/* Itens de navegação */
+nav ul a{
+    color: white;
+    text-shadow: 0 0 4px rgb(158, 158, 158);
+    text-decoration: none;
+    padding: 15px;
+    transition: .4s;
+}
+
+/* Estado de hover dos itens de navegação */
+nav ul a:hover{
+    background-color: #222;
+}
+
+/* Submenus de navegação */
+nav ul ul{
+    display: none;
+    position: absolute;
+    width: 100px;
+    top: 50px;
+    background-color: #444;
+    padding: 0rem;
+    font-size: .8rem;
+}
+
+/* Itens de navegação nos submenus */
+nav ul ul li a{
+    padding: 0.5rem;
+    display: block;
+}
+
+/* Lista de itens nos submenus */
+nav ul ul li{
+    position: relative;
+}
+
+/* Submenus aninhados */
+nav ul ul ul{
+    left: 100px;
+    top: 0;
+    background-color: #555;
+}
+
+/* Exibir submenus quando o item pai é hover */
+nav ul li:hover > ul{
+    display: block;
+}
+
+/* Botão "voltar ao topo" */
+.back-to-top{
+    display: block;
+    background-color: #222;
+    color: white;
+    text-shadow: 0 0 2px rgb(158, 158, 158);
+    padding:  .6rem;
+    border: 1px solid black;
+    border-radius: 5px;
+    bottom: 20px;
+    right: 20px;
+    position: fixed;
+
+}
+
+/* Estilos de botão */
+.btn{
+    text-align: center;
+    justify-content: center ;
+}
+
+.content{
+    margin-left:  30px;
+    display: flex;
+    flex-direction: column;
+    gap: 800px;
+    font-size: 1.4rem;
+}
+.ProdutoTitle{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 800px;
+}
+.produto{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 800px;
+}
+
+@media (max-width: 380px ) {
+    nav ul a{
+        font-size: .7rem;
+
+    }
+    .content{
+        font-size: 1rem;
+
+    }
+    nav ul ul{
+        width: 80px;
+    }
+    nav ul ul ul{
+        left: 80px;
+    }
+    nav ul ul a{
+        font-size: .5rem;
+        padding: 0;
+
+    }
+    nav ul ul ul a{
+        font-size: .6rem;
+
+    }
+    h1{
+        font-size: 1.5rem;
+    
+    }
+
+}

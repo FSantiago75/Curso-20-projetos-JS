@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <script src="JS/ValideInputs.js" defer></script>
+    <script src="JS/PasswordGeneration.js" defer></script>
+
+    <!-- Fonte Montserrat do google fotos -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="register-container">
+
+        <div class="register-banner">
+            <div class="banner-layer">
+                <h1>Seja bem-vindo!</h1>
+            </div>
+        </div>
+
+        <form class="register-form">
+            <h2>Crie sua conta!</h2>
+            <p>Registre-se para utilizar todas as funcionalidades do sistema</p>
+
+            <div class="form-control">
+                <label for="name">Nome:</label>
+                <input type="name" name="name" id="name" placeholder="Seu nome">
+                <p class="message"></p>
+            </div>
+            <div class="form-control">
+                <label for="email">E-mail:</label>
+                <input type="email" name="email" id="email" placeholder="Seu e-mail">
+                <p class="message"></p>
+            </div>
+            <div class="form-control">
+                <label for="password">Senha:</label>
+                <input type="password" name="password" id="password" placeholder="Sua senha">
+                <p class="message"></p>
+            </div>
+
+            <!-- Parametros de customização de senha -->
+            <div class="generate-options">
+                <p>Selecione as opções que deseja!</p>
+                <div class="form-control">
+                    <label for="length">Quantidade de caracteres:</label>
+                    <input type="text" name="length" id="length" value="10">
+                </div>
+                <div class="form-control">
+                    <label for="letters">Letras:</label>
+                    <input type="checkbox" name="letters" id="letters" checked>
+                </div>
+                <div class="form-control">
+                    <label for="numbers">Números</label>
+                    <input type="checkbox" name="numbers" id="numbers" checked>
+                </div>
+                <div class="form-control">
+                    <label for="symbols">Simbolos</label>
+                    <input type="checkbox" name="symbols" id="symbols" checked>
+                </div>
+
+                <!-- btn de envio dos parametros de senha -->
+                <button type="button" class="generate-custom-password">Gerar</button>
+                <!--Fim btn de envio dos parametros de senha -->
+
+            </div>
+            <!-- Fim parametros de customização de senha -->
+
+            <!-- Box de resultado da geração de senha padrão e customizada -->
+            <div class="generated-password-box">
+                <p>Aperte para copiar!</p>
+                <h4 class="created-password">aaaaa</h4>
+            </div>
+            <!-- Fim box de resultado da geração de senha padrão e customizada -->
+
+            <!-- Opção de customização de senha após geração da senha padrão -->
+            <div class="open-custom-password-box">
+                <p>Não gostou da sua senha? <span class="open-custom-password">Personalizar</span></p>
+            </div>
+            <!-- Fim opção de customização de senha após geração da senha padrão -->
+
+            <!-- Geração de senha inicial -->
+            <p>Quer ajuda para criar uma senha segura? <span class="open-password">Clique
+                    aqui</span></p>
+            <!-- Fim geração de senha inicial -->
+
+            <!-- Confirmação da senha do usuário -->
+            <div class="form-control">
+                <label for="confirm-password">Confirmação de senha:</label>
+                <input type="password" name="confirm-password" id="confirm-password" placeholder="Confirme sua senha">
+                <p class="message"></p>
+            </div>
+            <!-- Fim confirmação da senha do usuário -->
+
+            <!-- Envio de dados do formulário -->
+            <button type="submit" class="submit-btn">Enviar</button>
+            <!-- Fim envio de dados do formulário -->
+        </form>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,73 @@
+body {
+    text-align: center;
+    justify-content: center;
+    background-color: #e9e9e9;
+}
+
+.title {
+    font-family: 'Times New Roman';
+    text-align: center;
+    justify-content: center;
+}
+
+.container {
+    max-width: 50%;
+    margin: 0 auto;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 20px;
+    background-color: rgb(199, 199, 199);
+    border-radius: 1rem;
+    margin-bottom: 30px;
+    box-shadow: 0px 0px 10px rgb(87, 87, 87);
+}
+
+.progress {
+    width: 0%;
+    height: 100%;
+    background-color: #4caf50;
+    border-radius: 20px;
+    transition: width 1s ease-in-out;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between
+}
+
+.previous-btn, .btn-voltar-tela {
+    background-color: transparent;
+    color: #4caf50;
+    transition: 0.2s;
+}
+
+.next-btn {
+    background-color: #4caf50;
+    transition: 0.2s;
+}
+
+button {
+    border: 2px solid #4caf50;
+    font-size: 1rem;
+    padding: 0.4rem 1rem;
+    border-radius: 3px;
+    font-weight: bold;
+    box-shadow: 0px 0px 3px rgb(87, 87, 87);
+    cursor: pointer;
+    color: #fff;
+}
+
+button i {
+    margin-left: 0.2rem;
+    margin-right: 0.2rem;
+}
+
+.previous-btn:hover,
+.next-btn:hover, .btn-voltar-tela:hover {
+    transform: scale(1.05);
+    color: #fff;
+    background-color: #4caf50;
+}
+

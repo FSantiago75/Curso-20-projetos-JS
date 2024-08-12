@@ -1,0 +1,63 @@
+html{
+    height: 100%;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family:'Times New Roman', Times, serif
+}
+
+body{
+    background: radial-gradient(circle,  rgb(234, 247, 253) 30%, rgb(218, 241, 253) 50% , rgb(142, 197, 252) 100%);
+    background-size:cover;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    background-color: rgb(255, 255, 255);
+    padding: +80px;
+    border-radius: 50%;
+    font-size: 15px;
+    border-style: double;
+    border-color: black;
+}
+h1{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.input_group{
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    padding-left: 20%;
+}
+.output_group{
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    padding-left: 20%;
+}
+select,input{
+    padding: .4rem;
+    background-color:rgb(246, 253, 253);
+}
+button{
+    background-color: rgb(232, 244, 240);
+    padding: .4rem .8rem;
+    cursor: pointer;
+    transition: background-color 2s ease;
+}
+button:hover{
+    background-color: rgb(181, 245, 252);
+    transition: 1s;
+    animation: ease-in-out;
+}
+#message{
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    text-align: center;
+    font-size: 13px;  
+}

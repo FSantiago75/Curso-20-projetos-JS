@@ -1,0 +1,113 @@
+body{
+    background:linear-gradient(to bottom, 
+    rgb(255, 255, 255) 0%, 
+    rgb(190, 190, 190) 6% 94%,  /* Ajustando para deixar um intervalo de 3px de cinza claro */
+    rgb(255, 255, 255) 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+}
+.nav{
+    border-bottom: 1px solid black;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+}
+.title{
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    justify-content: center;
+    margin-left: 20px;
+    padding: 0.5rem 3rem;
+    font-size: 2rem;
+    background: linear-gradient(90deg, rgba(163, 163, 163, 0.74) 0%, rgb(197, 197, 197) 48%,rgba(163, 163, 163, 0.74));
+    border: 1px solid rgba(31, 31, 31, 0.664);
+
+}
+.input{
+    text-align: center;
+    justify-content: center;
+    margin-left: 20px;
+    width: auto;
+    height: auto;
+    cursor: pointer;
+    padding: 0.5rem 3rem;
+    font-size: 2rem;
+    background: linear-gradient(90deg, rgba(163, 163, 163, 0.74) 0%, rgb(197, 197, 197) 48%,rgba(163, 163, 163, 0.74));
+    border: 1px solid rgba(31, 31, 31, 0.664);
+    display: flex; /* Adicionado para alinhar o ícone */
+    align-items: center; /* Adicionado para alinhar o ícone */
+}
+
+input[type ="file"]{
+    display: none;
+}
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+.gallery-item{
+    flex: 0 0 calc(33.333% - 10px);
+}
+.gallery-image{
+    width: 100%;
+    height: 300px;
+    transition: .3s;
+    object-fit: cover;
+    cursor: pointer;
+}
+.gallery-image:hover{
+    transform: scale(1.05);
+}
+.lightbox{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .8);
+    z-index: 100;
+}
+.lightbox-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    
+}
+.lightbox-image{
+    max-width: 800px;
+    object-fit: cover;
+}
+.lightbox-close{
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+    color: white;
+    font-size: 2rem;
+    border: 1px solid white;
+    padding: 0.1rem 0.4rem;
+    transition: 1s;
+}
+.lightbox-del{
+    position: absolute;
+    top: 8rem;
+    right: 2rem;
+    color: white;
+    font-size: 2rem;
+    border: 1px solid white;
+    padding: 0.1rem 0.4rem;
+    transition: 1s;
+}
+.lightbox-close:hover{
+    background-color: white;
+    color: #000;
+}
+.lightbox-del:hover{
+    background-color: rgb(185, 0, 0);
+    color: #000;
+}
+
+
